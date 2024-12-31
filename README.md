@@ -45,19 +45,20 @@ _Insert Architecture Diagram Screenshot Here_
 - The raw dataset was streamed to **HDFS** using **Kafka**.
 - Kafka Topics were created to handle incoming data streams.
 - Command to create Kafka topic:
-
-````bash
-kafka-topics --bootstrap-server localhost:9092 \
---create --topic test-topic --partitions 1 --replication-factor 1```
-
-**Kafka Producer screenshot**
-![alt text](image.png)
+  **Kafka Producer screenshot**
+  ![alt text](image.png)
 
 ---
 
 ### **2. Storing Raw Data in HDFS**
+
 - Kafka Consumer code :
-![alt text](image-2.png)
+  ![alt text](image-2.png)
+
+````bash
+kafka-topics --bootstrap-server localhost:9092 \
+--create --topic test-topic --partitions 1 --replication-factor 1
+```
 
 
 - Kafka ingested data was saved in HDFS:
