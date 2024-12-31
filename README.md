@@ -52,23 +52,23 @@ _Insert Architecture Diagram Screenshot Here_
 
 ### **2. Storing Raw Data in HDFS**
 
-**Kafka Consumer code:**
-![alt text](image-2.png)
+    **Kafka Consumer code:**
+    ![alt text](image-2.png)
 
-````bash
+```bash
 kafka-topics --bootstrap-server localhost:9092 \
 --create --topic test-topic --partitions 1 --replication-factor 1
 ```
 
-
 **Kafka ingested data was saved in HDFS:**
 ![alt text](image-1.png)
-
 
 ---
 
 ### **3. Data Cleaning with Spark**
+
 - **Pyhtin commands for spark**:
+
 ```python
 from pyspark.sql.types import *
 
@@ -113,7 +113,7 @@ def to_hbase(row):
 # Map data for HBase
 hbase_data = df.rdd.map(lambda row: to_hbase(row.asDict(recursive=True)))
 
-````
+```
 
 ```bash
 hbase_data.write.csv("hdfs://hadoop-namenode:9000/tmp/", header=True)
