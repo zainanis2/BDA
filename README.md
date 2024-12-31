@@ -52,8 +52,8 @@ _Insert Architecture Diagram Screenshot Here_
 
 ### **2. Storing Raw Data in HDFS**
 
-- Kafka Consumer code :
-  ![alt text](image-2.png)
+**Kafka Consumer code:**
+![alt text](image-2.png)
 
 ````bash
 kafka-topics --bootstrap-server localhost:9092 \
@@ -61,7 +61,7 @@ kafka-topics --bootstrap-server localhost:9092 \
 ```
 
 
-- Kafka ingested data was saved in HDFS:
+**Kafka ingested data was saved in HDFS:**
 ![alt text](image-1.png)
 
 
