@@ -218,31 +218,6 @@ finally:
 
 ---
 
-### **5. Flask App for Visualization and EDA**
-
-- Flask app was created to show the dataset details and provide exploratory data analysis (EDA).
-- Flask routes:
-
-```python
-@app.route('/stats')
-def stats():
-    return render_template('stats.html', data=df.describe().to_dict())
-```
-
-_Insert Screenshot of Flask App Home Page and Data Insights_
-
----
-
-### **6. Exploratory Data Analysis (EDA)**
-
-EDA involved:
-
-- **Descriptive Statistics** - Mean, Median, Min, Max.
-- **Data Distribution** - Histograms and Pie Charts.
-- **Trends** - Transactions over time.
-
-## _Insert Screenshot of EDA Visualizations from Flask App_
-
 ## **Final Thoughts**
 
 This project showcases how real-time analytics pipelines can be built using modern big data tools. It handles data ingestion, transformation, and visualization seamlessly, providing insights for decision-making.
